@@ -1,0 +1,19 @@
+# Ignore generated files
+*.pyc
+*.pyo
+*.ipynb_checkpoints/
+
+# Ignore virtual environment files
+.venv
+
+# Ignore build artifacts
+*.egg-info
+*.build
+
+# Ignore test files
+*.test.*
+
+# Ignore other files
+*.txt
+*.csv
+*.json
