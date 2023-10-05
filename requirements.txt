@@ -26,3 +26,4 @@ Werkzeug==2.0.2
 jupyterlab==4.0.0
 ipywidgets
 httpx
+langchain
