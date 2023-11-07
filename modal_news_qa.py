@@ -7,7 +7,7 @@ from numpy import dot
 
 stub = modal.Stub(name='news-api-qa', image=modal.Image.debian_slim(python_version='3.10').pip_install(['openai', 'requests', 'numpy']))
 
-GPT_MODEL = "gpt-4"
+GPT_MODEL = "gpt-4-1106-preview"
 
 # Helper functions
 @stub.function(secret=modal.Secret.from_name("my-openai-key"))
@@ -20,7 +20,8 @@ def json_gpt(prompt: str):
             {"role": "user", "content": prompt},
         ],
         temperature=0.1,
-        request_timeout=60
+        request_timeout=60,
+        response_format={'type': "json_object"}
     )
 
     text = completion.choices[0].message.content
