@@ -28,3 +28,4 @@ ipywidgets
 httpx
 langchain
 modal
+replicate
